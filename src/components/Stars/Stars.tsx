@@ -1,11 +1,12 @@
+import React from 'react';
 import './Stars.css';
 
-export default function Stars ({ count }) {
-    if (typeof count !== 'number') console.log('Не число');
+export default function Stars ({ count } : {count: number}) {
+    // if (typeof count !== 'number') console.log('Не число');
     if (count < 0) return;
     if (count >= 6) return;
 
-    let steps = [];
+    let steps: React.ReactNode[] = [];
     
     for (let i = 0; i < count; i++) {
         steps.push(
@@ -19,7 +20,7 @@ export default function Stars ({ count }) {
     }
 
     return (
-        <ul class="card-body-stars u-clearfix">
+        <ul className="card-body-stars u-clearfix">
             {steps}
         </ul>
     );

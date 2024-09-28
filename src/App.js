@@ -1,5 +1,5 @@
 import './App.css';
-import Stars from './components/Stars/Stars';
+import Stars from './components/Stars/Stars.tsx';
 
 function App() {
     return (
